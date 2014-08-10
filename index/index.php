@@ -12,20 +12,23 @@
         <title>meurgevender</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
         <link href="css/half-slider.css" rel="stylesheet">
 
         <!-- Boostrap Btn Circle -->
-        <link href="css/bootstrap-btncircle.css" rel="stylesheet">
+        <link href="../bootstrap/css/bootstrap-btncircle.css" rel="stylesheet">
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <!-- Font Awenson -->
+        <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet"
+
+              <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+              <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+              <!--[if lt IE 9]>
+                  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+              <![endif]-->
 
     </head>
 
@@ -114,16 +117,15 @@
                 <div class="col-lg-12">
                     <h1>...</h1>
                     <p>...</p>
-                    <br>
-                    <div class="text-center">
-                        <div class="col-lg-6 col-md-6 ">
-                            <h3>Me urge vender!</h3>
-                            <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <h3>Me urge comprar!</h3>
-                            <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button>
-                        </div>
+                </div>
+                <div class="text-center">
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Me urge vender!</h3>
+                        <button type="button" id="btnvender" class="btn btn-primary btn-circle btn-xl"><i class="fa fa-umbrella"></i></button>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Me urge comprar!</h3>
+                        <button type="button" id="btncomprar" class="btn btn-danger btn-circle btn-xl"><i class="fa fa-umbrella"></i></button>
                     </div>
                 </div>
             </div>
@@ -142,51 +144,50 @@
 
         </div>
         <!-- /.container -->
+        <!-- Modal -->
+        <div class="modal fade" id="mdlvender" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="modal fade" id="mdlcomprar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
         <!-- jQuery Version 1.11.0 -->
-        <script src="js/jquery-1.11.0.js"></script>
+        <script src="../bootstrap/js/jquery.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
 
         <!-- Script to Activate the Carousel -->
         <script>
             $('.carousel').carousel({
                 interval: 5000 //changes the speed
-            })
+            });
         </script>
 
         <!-- Js -->
         <script src="js/index.js"></script>
     </body>
-    <!-- Modal -->
-    <div class="modal fade" id="mdlvender" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <div class="modal fade" id="mdlcomprarr" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-
-                </div>
-                <div class="modal-footer">
-
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
 </html>
