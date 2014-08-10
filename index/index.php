@@ -129,11 +129,11 @@
                 <div class="text-center">
                     <div class="col-lg-6 col-md-6">
                         <span style="font-size: 24px">Me urge <strong>Comprar!</strong></span><br>
-                        <button type="button" id="btncomprar" class="btn btn-primary btn-circle btn-xli"><i class="fa fa-umbrella fa-5x"></i></button>
+                        <button type="button" id="btncomprar" class="btn btn-primary btn-circle btn-xli"><i class="fa fa-money fa-4x"></i></button>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <span style="font-size: 24px">Me urge <strong>Vender!</strong></span><br>
-                        <button  type="button" id="btnvender" class="btn btn-danger btn-circle btn-xli"><i class="fa fa-umbrella fa-5x"></i></button>
+                        <button  type="button" id="btnvender" class="btn btn-danger btn-circle btn-xli"><i class="fa fa-building fa-4x"></i></button>
                     </div>
                 </div>
             </div>
