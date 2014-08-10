@@ -21,21 +21,25 @@
         <link href="../bootstrap/css/bootstrap-btncircle.css" rel="stylesheet">
 
         <!-- Font Awenson -->
-        <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet"
+        <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-              <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-              <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-              <!--[if lt IE 9]>
-                  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-                  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-              <![endif]-->
+        <!-- Alertify -->
+        <link href="../alertify/themes/alertify.core.css" rel="stylesheet">
+        <link href="../alertify/themes/alertify.default.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
     </head>
 
     <body>
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px 0px 5px 5px;">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -45,7 +49,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php">meurgevender</a>
+                    <a class="navbar-brand" href="index.php"><img alt="" src="imgs/logo.png" height="25" /></a>
+
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -74,7 +79,6 @@
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
-
             <!-- Wrapper for Slides -->
             <div class="carousel-inner">
                 <div class="item active">
@@ -114,18 +118,20 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-12">
-                    <h1>...</h1>
-                    <p>...</p>
+                <div class="col-lg-12" style="padding-top: 3%">
+                    <div  class="well well-sm" >
+                        <span style="font-size: 24px"><strong>Compra - Venta</strong> de Inmobiliaria</span><br>
+                        <p>Selecciona la opcion de tu preferencia, llena el formulario y publica tu venta o compra, asi de facil!</p>
+                    </div>
                 </div>
                 <div class="text-center">
                     <div class="col-lg-6 col-md-6">
-                        <h3>Me urge vender!</h3>
-                        <button type="button" id="btnvender" class="btn btn-primary btn-circle btn-xl"><i class="fa fa-umbrella"></i></button>
+                        <span style="font-size: 24px">Me urge <strong>Comprar!</strong></span><br>
+                        <button type="button" id="btnvender" class="btn btn-primary btn-circle btn-xli"><i class="fa fa-umbrella fa-5x"></i></button>
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <h3>Me urge comprar!</h3>
-                        <button type="button" id="btncomprar" class="btn btn-danger btn-circle btn-xl"><i class="fa fa-umbrella"></i></button>
+                        <span style="font-size: 24px">Me urge <strong>Vender!</strong></span><br>
+                        <button  type="button" id="btncomprar" class="btn btn-danger btn-circle btn-xli"><i class="fa fa-umbrella fa-5x"></i></button>
                     </div>
                 </div>
             </div>
@@ -145,30 +151,33 @@
         </div>
         <!-- /.container -->
         <!-- Modal -->
-        <div class="modal fade" id="mdlvender" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+        <div class="modal fade" id="mdlcomprar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog" style="width: 90%" >
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <span style="font-size: 24px">Nueva <strong>Compra</strong></span>
                     </div>
                     <div class="modal-body">
                     </div>
                     <div class="modal-footer">
+                        <button type="button" id="guardarcompra" class="btn btn-primary btn-circle btn-lg">OK</button>
+                        <button type="button" id="cancelarcompra" class="btn btn-default btn-circle btn-lg">X</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-        <div class="modal fade" id="mdlcomprar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+        <div class="modal fade" id="mdlvender" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog" style="width: 90%">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <span style="font-size: 24px">Nueva <strong>Venta</strong></span>
                     </div>
                     <div class="modal-body">
 
                     </div>
                     <div class="modal-footer">
-
+                        <button type="button" id="guardarventa" class="btn btn-danger btn-circle btn-lg">OK</button>
+                        <button type="button" id="cancelarventa" class="btn btn-default btn-circle btn-lg">X</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -179,6 +188,9 @@
 
         <!-- Bootstrap Core JavaScript -->
         <script src="../bootstrap/js/bootstrap.min.js"></script>
+        
+        <!-- Alertify JS -->
+        <script src="../alertify/lib/alertify.js"></script>
 
         <!-- Script to Activate the Carousel -->
         <script>
