@@ -122,18 +122,17 @@
                     <div  class="well well-sm" >
                         <span style="font-size: 24px"><strong>Compra - Venta</strong> de Inmobiliaria</span><br>
                         <p>Selecciona la opción de tu preferencia, llena el formulario y publica tu venta o compra.
-                            ¡Así de fácil!
                         </p>
                     </div>
                 </div>
                 <div class="text-center">
                     <div class="col-lg-6 col-md-6">
                         <span style="font-size: 24px">Me urge <strong>Comprar!</strong></span><br>
-                        <button type="button" id="btncomprar" class="btn btn-primary btn-circle btn-xli"><i class="fa fa-money fa-4x"></i></button>
+                        <button type="button" id="btncomprar" class="btn btn-success btn-circle btn-xli"><i class="fa fa-money fa-4x"></i></button>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <span style="font-size: 24px">Me urge <strong>Vender!</strong></span><br>
-                        <button  type="button" id="btnvender" class="btn btn-danger btn-circle btn-xli"><i class="fa fa-building fa-4x"></i></button>
+                        <button  type="button" id="btnvender" class="btn btn-success btn-circle btn-xli"><i class="fa fa-building fa-4x"></i></button>
                     </div>
                 </div>
             </div>
@@ -154,22 +153,71 @@
         <!-- /.container -->
         <!-- Modal -->
         <div class="modal fade" id="mdlcomprar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-            <div class="modal-dialog" style="width: 90%" >
+            <div class="modal-dialog"  >
                 <div class="modal-content">
                     <div class="modal-header">
                         <span style="font-size: 24px">Nueva <strong>Compra</strong></span>
                     </div>
                     <div class="modal-body">
+                        <span style="font-size: 18px"><strong>- Datos del predio:</strong></span><br>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Colonia:</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="c_colonia" type="text"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Precio:</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="c_precio" type="text" placeholder="0.00"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Medidas del terreno:</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="c_madidas" type="text" placeholder="ej. 30m x 100m"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Numero de habitaciones:</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="c_habitaciones" type="number" min="1" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Numero de baños:</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="c_baños" type="number" min="0" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Numero de pisos:</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="c_baños" type="number" min="1" placeholder=""/>
+                                </div>
+                            </div>
+                        </form>
+                        <hr>
+                        <span style="font-size: 18px"><strong>- Datos del vendedor:</strong></span>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Nombre:</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="c_nombre" type="text"/>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" id="guardarcompra" class="btn btn-primary btn-circle btn-lg">OK</button>
-                        <button type="button" id="cancelarcompra" class="btn btn-default btn-circle btn-lg">X</button>
+                        <button type="button" id="guardarcompra" class="btn btn-success btn-circle btn-lg"><i class="fa fa-check"></i></button>
+                        <button type="button" id="cancelarcompra" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-times"></i></button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
         <div class="modal fade" id="mdlvender" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-            <div class="modal-dialog" style="width: 90%">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <span style="font-size: 24px">Nueva <strong>Venta</strong></span>
@@ -178,8 +226,8 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" id="guardarventa" class="btn btn-danger btn-circle btn-lg">OK</button>
-                        <button type="button" id="cancelarventa" class="btn btn-default btn-circle btn-lg">X</button>
+                        <button type="button" id="guardarventa" class="btn btn-success btn-circle btn-lg"><i class="fa fa-check"></i></button>
+                        <button type="button" id="cancelarventa" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-times"></i></button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
