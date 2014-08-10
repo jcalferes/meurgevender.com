@@ -153,7 +153,7 @@
         </div>
         <!-- /.container -->
         <!-- Modal -->
-        <div class="modal fade" id="mdlcomprar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal fade" id="mdlcomprar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog" style="width: 90%" >
                 <div class="modal-content">
                     <div class="modal-header">
@@ -168,7 +168,7 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-        <div class="modal fade" id="mdlvender" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal fade" id="mdlvender" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog" style="width: 90%">
                 <div class="modal-content">
                     <div class="modal-header">
