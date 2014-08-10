@@ -121,17 +121,19 @@
                 <div class="col-lg-12" style="padding-top: 3%">
                     <div  class="well well-sm" >
                         <span style="font-size: 24px"><strong>Compra - Venta</strong> de Inmobiliaria</span><br>
-                        <p>Selecciona la opcion de tu preferencia, llena el formulario y publica tu venta o compra, asi de facil!</p>
+                        <p>Selecciona la opción de tu preferencia, llena el formulario y publica tu venta o compra.
+                            ¡Así de fácil!
+                        </p>
                     </div>
                 </div>
                 <div class="text-center">
                     <div class="col-lg-6 col-md-6">
                         <span style="font-size: 24px">Me urge <strong>Comprar!</strong></span><br>
-                        <button type="button" id="btnvender" class="btn btn-primary btn-circle btn-xli"><i class="fa fa-umbrella fa-5x"></i></button>
+                        <button type="button" id="btncomprar" class="btn btn-primary btn-circle btn-xli"><i class="fa fa-umbrella fa-5x"></i></button>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <span style="font-size: 24px">Me urge <strong>Vender!</strong></span><br>
-                        <button  type="button" id="btncomprar" class="btn btn-danger btn-circle btn-xli"><i class="fa fa-umbrella fa-5x"></i></button>
+                        <button  type="button" id="btnvender" class="btn btn-danger btn-circle btn-xli"><i class="fa fa-umbrella fa-5x"></i></button>
                     </div>
                 </div>
             </div>
@@ -188,7 +190,7 @@
 
         <!-- Bootstrap Core JavaScript -->
         <script src="../bootstrap/js/bootstrap.min.js"></script>
-        
+
         <!-- Alertify JS -->
         <script src="../alertify/lib/alertify.js"></script>
 
