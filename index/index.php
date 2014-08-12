@@ -70,9 +70,9 @@
             </div>
             <!-- /.container -->
         </nav>
-
+        
         <!-- Half Page Image Background Carousel Header -->
-        <header id="myCarousel" class="carousel slide">
+        <div id="myCarousel" class="carousel" >
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -112,8 +112,7 @@
                 <span class="icon-next"></span>
             </a>
 
-        </header>
-
+        </div>
         <!-- Page Content -->
         <div class="container">
 
@@ -159,53 +158,69 @@
                         <span style="font-size: 24px">Nueva <strong>Compra</strong></span>
                     </div>
                     <div class="modal-body">
-                        <span style="font-size: 18px"><strong>- Datos del predio:</strong></span><br>
-                        <form class="form-horizontal">
+                        <h4>- Datos del predio:</h4>
+                        <form style="padding-left: 25px; padding-right: 25px">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Colonia:</label>
-                                <div class="col-sm-9">
-                                    <input class="form-control" id="c_colonia" type="text"/>
-                                </div>
+                                <label class="control-label">Colonia:</label>
+                                <input class="form-control" id="c_colonia" type="text"/>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Precio:</label>
-                                <div class="col-sm-6">
-                                    <input class="form-control" id="c_precio" type="text" placeholder="0.00"/>
-                                </div>
+                                <label class="control-label">Precio:</label>
+                                <input class="form-control" id="c_precio" type="text" placeholder="0.00"/>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Medidas del terreno:</label>
-                                <div class="col-sm-9">
-                                    <input class="form-control" id="c_madidas" type="text" placeholder="ej. 30m x 100m"/>
-                                </div>
+                                <label class=" control-label">Medidas del terreno:</label>
+                                <input class="form-control" id="c_madidas" type="text" placeholder="ej. 30m x 100m"/>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Numero de habitaciones:</label>
-                                <div class="col-sm-6">
-                                    <input class="form-control" id="c_habitaciones" type="number" min="1" placeholder=""/>
-                                </div>
+                                <label class=" control-label">Numero de habitaciones:</label>
+                                <input class="form-control" id="c_habitaciones" type="number" min="1" placeholder="" style="width: 100px"/>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Numero de baños:</label>
-                                <div class="col-sm-6">
-                                    <input class="form-control" id="c_baños" type="number" min="0" placeholder=""/>
-                                </div>
+                                <label class=" control-label">Numero de baños:</label>
+                                <input class="form-control" id="c_baños" type="number" min="0" placeholder="" style="width: 100px"/>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Numero de pisos:</label>
-                                <div class="col-sm-6">
-                                    <input class="form-control" id="c_baños" type="number" min="1" placeholder=""/>
-                                </div>
+                                <label class="control-label">Numero de pisos:</label>
+                                <input class="form-control" id="c_baños" type="number" min="1" placeholder="" style="width: 100px"/>
+                            </div>
+                            <div class="checkbox-inline" id="c_jardin">
+                                <label>
+                                    <input type="checkbox"> Jardin
+                                </label>
+                            </div>
+                            <div class="checkbox-inline" id="c_patio">
+                                <label>
+                                    <input type="checkbox"> Patio
+                                </label>
                             </div>
                         </form>
                         <hr>
-                        <span style="font-size: 18px"><strong>- Datos del vendedor:</strong></span>
-                        <form class="form-horizontal">
+                        <h4>- Datos del vendedor:</h4>
+                        <form style="padding-left: 25px; padding-right: 25px">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Nombre:</label>
-                                <div class="col-sm-9">
-                                    <input class="form-control" id="c_nombre" type="text"/>
-                                </div>
+                                <label class="control-label">Nombre:</label>
+                                <input class="form-control" id="c_nombre" type="text"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Telefono:</label>
+                                <input class="form-control" id="c_telefono" type="text" style="width: 350px"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Correo electronico:</label>
+                                <input class="form-control" id="c_email" type="text" style="width: 350px"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Direccion:</label>
+                                <input class="form-control" id="c_direccion" type="text"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Colonia:</label>
+                                <input class="form-control" id="c_colonia" type="text" style="width: 350px"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Codigo postal:</label>
+                                <input class="form-control" id="c_cp" type="text" style="width: 100px"/>
                             </div>
                         </form>
                     </div>
