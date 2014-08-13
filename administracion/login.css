@@ -19,7 +19,7 @@ body{
 
 .fa-user{
     font-size: 60px;
-    color: white;
+    color: #ff7800;
 }
 
 .contentenidoLogin{
@@ -71,4 +71,23 @@ body{
     width: 500px;
     padding: 20px 1px;
     background-color: #404040;
+}
+
+@media screen and (max-width: 900px){
+    .encabezadoLogin{
+        background-color: white;
+        border: 1px;
+        width: 300px;
+        border-radius: 15px 15px 0px 0px;
+    }
+    .contentenidoLogin{
+        width: 300px;
+        background-color: #505050;
+        padding: 20px 1px;
+    }
+    .footerlogin{
+    width: 300px;
+    padding: 20px 1px;
+    background-color: #404040;
+}
 }

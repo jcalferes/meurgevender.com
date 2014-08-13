@@ -21,8 +21,6 @@ $(document).ready(function() {
         }
     });
 
-
-
     $("#tablaInformacion").hide();
     $("#lnkVentas").click(function() {
         $("#tablaInformacion").slideUp('slow');
