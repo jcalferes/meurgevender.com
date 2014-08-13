@@ -19,6 +19,7 @@ $(document).ready(function() {
     $('#c_banos').numeric();
     $('#c_precio').numeric(".");
     $('#c_cp').numeric();
+    $('#c_pisos').numeric();
     $('#c_telefono').numeric();
 });
 
