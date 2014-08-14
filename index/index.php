@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>meurgevender</title>
+        <title>Me urge vender</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php">Meurgevender</a>
+                    <a class="navbar-brand" href="index.php">Me urge vender</a>
 
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->

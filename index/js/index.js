@@ -67,7 +67,7 @@ $("#guardarcompra").click(function() {
     var banos = $("#c_banos").val();
     var pisos = $("#c_pisos").val();
     var jardin = 0;
-    var patio = 1;
+    var patio = 0;
 
     var chkjardin = $("#chk_jardin").is(":checked");
     var chkpatio = $("#chk_patio").is(":checked");
@@ -85,4 +85,33 @@ $("#guardarcompra").click(function() {
     var email = $("#c_email").val();
     var direccion = $("#c_direccion").val();
     var ccolonia = $("#c_ccolonia").val();
+    var cp = $("#c_cp").val();
+
+    var datos = new FormData();
+    
+    datos.append('colonia', colonia);
+    datos.append('precio', precio);
+    datos.append('medidas', medidas);
+    datos.append('habitaciones', habitaciones);
+    datos.append('banos', banos);
+    datos.append('pisos', pisos);
+    datos.append('jardin', jardin);
+    datos.append('patio', patio);
+    datos.append('nombre', nombre);
+    datos.append('telefono', telefono);
+    datos.append('email', email);
+    datos.append('direccion', direccion);
+    datos.append('ccolonia', ccolonia);
+    datos.append('cp', cp);
+
+    $.ajax({
+        url: 'comprar-guardardatos.php', //Url a donde la enviaremos
+        type: 'GET', //Metodo que usaremos
+        contentType: false, //Debe estar en false para que pase el objeto sin procesar
+        data: datos, //Le pasamos el objeto que creamos con los archivos
+        processData: false, //Debe estar en false para que JQuery no procese los datos a enviar
+        cache: false //Para que el formulario no guarde cache
+    }).done(function(msg) {
+
+    });
 });
