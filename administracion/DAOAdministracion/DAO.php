@@ -28,4 +28,14 @@ class DAO {
         return $respuesta;
     }
 
+    function dameInformacionVenta() {
+        include '../DaoConnection/coneccion.php';
+        $cn = new coneccion();
+        $sql = "select * from datosvendercasa dv 
+                inner join clientes cl 
+                on dv.idClientes = cl.idClientes";
+        $datos = mysql_query($sql, $cn->Conectarse());
+        return $datos;
+    }
+
 }
