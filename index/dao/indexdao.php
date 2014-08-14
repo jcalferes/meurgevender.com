@@ -2,8 +2,8 @@
 
 class indexdao {
 
-    function comprarGuardarDatos() {
-        
+    function comprarGuardarDatos(Compra $compra) {
+        $query = "";
     }
 
 }
