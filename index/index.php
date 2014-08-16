@@ -184,14 +184,14 @@
                                 <label class="control-label">Numero de pisos:</label>
                                 <input class="form-control compdata" id="c_pisos" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
                             </div>
-                            <div class="checkbox-inline" id="chk_jardin">
+                            <div class="checkbox-inline" >
                                 <label>
-                                    <input type="checkbox"> Jardin
+                                    <input type="checkbox" id="chk_jardin"> Jardin
                                 </label>
                             </div>
-                            <div class="checkbox-inline" id="chk_patio">
+                            <div class="checkbox-inline" >
                                 <label>
-                                    <input type="checkbox"> Patio
+                                    <input type="checkbox" id="chk_patio"> Patio
                                 </label>
                             </div>
                         </form>

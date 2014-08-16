@@ -3,10 +3,12 @@
 include_once '../DaoConnection/coneccion.php';
 include_once './dao/indexdao.php';
 include_once './clases/Compra.php';
+include_once './clases/Cliente.php';
 
 $cn = new coneccion();
 $dao = new indexdao();
 $compra = new Compra();
+$cliente = new Cliente();
 
 $compra->setColonia($_POST["colonia"]);
 $compra->setPrecio($_POST["precio"]);
@@ -16,14 +18,20 @@ $compra->setBanos($_POST["banos"]);
 $compra->setPisos($_POST["pisos"]);
 $compra->setJardin($_POST["jardin"]);
 $compra->setPatio($_POST["patio"]);
-$compra->setNombre($_POST["nombre"]);
-$compra->setTelefono($_POST["telefono"]);
-$compra->setEmail($_POST["email"]);
-$compra->setDireccion($_POST["direccion"]);
-$compra->setCcolonia($_POST["ccolonia"]);
-$compra->setCp($_POST["cp"]);
+$cliente->setNombre($_POST["nombre"]);
+$cliente->setTelefono($_POST["telefono"]);
+$cliente->setEmail($_POST["email"]);
+$cliente->setDireccion($_POST["direccion"]);
+$cliente->setCcolonia($_POST["ccolonia"]);
+$cliente->setCp($_POST["cp"]);
 
 $cn->Conectarse();
-$ctrl = $dao->comprarGuardarDatos($compra);
+$ctrl = $dao->comprarGuardarDatos($cliente, $compra);
+//$tester =  is_resource($ctrl);
+if ($ctrl == 'true') {
+    echo 0;
+} else {
+    echo $ctrl;
+}
 $cn->cerrarBd();
 

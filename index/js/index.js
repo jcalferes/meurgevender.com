@@ -38,6 +38,20 @@ $("#cancelarcompra").click(function() {
         }});
     alertify.confirm("¿Estas seguro de cancelar la publicacion? Todo el contenido no guardado se perdera.", function(e) {
         if (e) {
+            $("#c_colonia").val("");
+            $("#c_precio").val("");
+            $("#c_medidas").val("");
+            $("#c_habitaciones").val("");
+            $("#c_banos").val("");
+            $("#c_pisos").val("");
+            $("#chk_jardin").prop("checked", false);
+            $("#chk_patio").prop("checked", false);
+            $("#c_nombre").val("");
+            $("#c_telefono").val("");
+            $("#c_email").val("");
+            $("#c_direccion").val("");
+            $("#c_ccolonia").val("");
+            $("#c_cp").val("");
             $('#mdlcomprar').modal('toggle');
         } else {
         }
@@ -88,6 +102,7 @@ $("#guardarcompra").click(function() {
     var chkjardin = $("#chk_jardin").is(":checked");
     var chkpatio = $("#chk_patio").is(":checked");
 
+    
     if (chkjardin == true) {
         jardin = 1;
     }
@@ -128,8 +143,7 @@ $("#guardarcompra").click(function() {
     datos.append('ccolonia', ccolonia);
     datos.append('cp', cp);
 
-    alert("Hasta aqui");
-    return false;
+
     $.ajax({
         url: 'comprar-guardardatos.php', //Url a donde la enviaremos
         type: 'POST', //Metodo que usaremos
@@ -138,20 +152,25 @@ $("#guardarcompra").click(function() {
         processData: false, //Debe estar en false para que JQuery no procese los datos a enviar
         cache: false //Para que el formulario no guarde cache
     }).done(function(msg) {
-
-        $("#c_colonia").val("");
-        $("#c_precio").val("");
-        $("#c_medidas").val("");
-        $("#c_habitaciones").val("");
-        $("#c_banos").val("");
-        $("#c_pisos").val("");
-        $("#chk_jardin").prop("checked", false);
-        $("#chk_patio").prop("checked", false);
-        $("#c_nombre").val("");
-        $("#c_telefono").val("");
-        $("#c_email").val("");
-        $("#c_direccion").val("");
-        $("#c_ccolonia").val("");
-        $("#c_cp").val("");
+        if (msg == 0) {
+            $("#c_colonia").val("");
+            $("#c_precio").val("");
+            $("#c_medidas").val("");
+            $("#c_habitaciones").val("");
+            $("#c_banos").val("");
+            $("#c_pisos").val("");
+            $("#chk_jardin").prop("checked", false);
+            $("#chk_patio").prop("checked", false);
+            $("#c_nombre").val("");
+            $("#c_telefono").val("");
+            $("#c_email").val("");
+            $("#c_direccion").val("");
+            $("#c_ccolonia").val("");
+            $("#c_cp").val("");
+            $('#mdlcomprar').modal('toggle');
+            alertify.success("La publicacion se realizo con exito");
+        } else {
+            alertify.alert("ERROR: " + msg);
+        }
     });
 });
