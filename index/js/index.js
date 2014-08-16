@@ -59,8 +59,24 @@ $("#cancelarventa").click(function() {
 });
 
 $("#guardarcompra").click(function() {
-    alert("hola");
-    var colonia = $("#c_colinia").val();
+
+    var ctrlvalidacioncompra;
+    $(".compdata").each(function() {
+        var valor = $.trim($(this).val());
+        if (valor == "") {
+            ctrlvalidacioncompra = 1;
+            return false;
+        } else {
+            ctrlvalidacioncompra = 0;
+        }
+    });
+
+    if (ctrlvalidacioncompra != 0) {
+        alertify.error("Todos los campos son obligatorios");
+        return false;
+    }
+
+    var colonia = $.trim($("#c_colonia").val());
     var precio = $("#c_precio").val();
     var medidas = $("#c_medidas").val();
     var habitaciones = $("#c_habitaciones").val();
@@ -82,13 +98,21 @@ $("#guardarcompra").click(function() {
 
     var nombre = $("#c_nombre").val();
     var telefono = $("#c_telefono").val();
+
     var email = $("#c_email").val();
+    if (/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) {
+    } else {
+        alertify.error("La direccion de correo electronico es invalida");
+        $("#c_email").focusin();
+        return false;
+    }
+
     var direccion = $("#c_direccion").val();
     var ccolonia = $("#c_ccolonia").val();
     var cp = $("#c_cp").val();
 
     var datos = new FormData();
-    
+
     datos.append('colonia', colonia);
     datos.append('precio', precio);
     datos.append('medidas', medidas);
@@ -104,14 +128,30 @@ $("#guardarcompra").click(function() {
     datos.append('ccolonia', ccolonia);
     datos.append('cp', cp);
 
+    alert("Hasta aqui");
+    return false;
     $.ajax({
         url: 'comprar-guardardatos.php', //Url a donde la enviaremos
-        type: 'GET', //Metodo que usaremos
+        type: 'POST', //Metodo que usaremos
         contentType: false, //Debe estar en false para que pase el objeto sin procesar
         data: datos, //Le pasamos el objeto que creamos con los archivos
         processData: false, //Debe estar en false para que JQuery no procese los datos a enviar
         cache: false //Para que el formulario no guarde cache
     }).done(function(msg) {
 
+        $("#c_colonia").val("");
+        $("#c_precio").val("");
+        $("#c_medidas").val("");
+        $("#c_habitaciones").val("");
+        $("#c_banos").val("");
+        $("#c_pisos").val("");
+        $("#chk_jardin").prop("checked", false);
+        $("#chk_patio").prop("checked", false);
+        $("#c_nombre").val("");
+        $("#c_telefono").val("");
+        $("#c_email").val("");
+        $("#c_direccion").val("");
+        $("#c_ccolonia").val("");
+        $("#c_cp").val("");
     });
 });

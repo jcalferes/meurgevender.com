@@ -162,27 +162,27 @@
                         <form style="padding-left: 25px; padding-right: 25px">
                             <div class="form-group">
                                 <label class="control-label">Colonia:</label>
-                                <input class="form-control" id="c_colonia" type="text"/>
+                                <input class="form-control compdata" id="c_colonia" type="text"/>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Precio:</label>
-                                <input class="form-control" id="c_precio" type="text" placeholder="0.00" />
+                                <input class="form-control compdata" id="c_precio" type="text" placeholder="0.00" />
                             </div>
                             <div class="form-group">
                                 <label class=" control-label">Medidas del terreno:</label>
-                                <input class="form-control" id="c_medidas" type="text" placeholder="ej. 30m x 100m"/>
+                                <input class="form-control compdata" id="c_medidas" type="text" placeholder="ej. 30m x 100m"/>
                             </div>
                             <div class="form-group">
                                 <label class=" control-label">Numero de habitaciones:</label>
-                                <input class="form-control" id="c_habitaciones" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
+                                <input class="form-control compdata" id="c_habitaciones" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
                             </div>
                             <div class="form-group">
                                 <label class=" control-label">Numero de baños:</label>
-                                <input class="form-control" id="c_banos" type="number" min="0" placeholder="" style="width: 100px" onpaste="return  false"/>
+                                <input class="form-control compdata" id="c_banos" type="number" min="0" placeholder="" style="width: 100px" onpaste="return  false"/>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Numero de pisos:</label>
-                                <input class="form-control" id="c_pisos" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
+                                <input class="form-control compdata" id="c_pisos" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
                             </div>
                             <div class="checkbox-inline" id="chk_jardin">
                                 <label>
@@ -200,27 +200,27 @@
                         <form style="padding-left: 25px; padding-right: 25px">
                             <div class="form-group">
                                 <label class="control-label">Nombre:</label>
-                                <input class="form-control" id="c_nombre" type="text" onkeypress="return validkey(event);"/>
+                                <input class="form-control compdata" id="c_nombre" type="text" onkeypress="return validkey(event);"/>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Telefono:</label>
-                                <input class="form-control" id="c_telefono" type="text" style="width: 350px" onpaste="return false"/>
+                                <input class="form-control compdata" id="c_telefono" type="text" style="width: 350px" onpaste="return false"/>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Correo electronico:</label>
-                                <input class="form-control" id="c_email" type="text" style="width: 350px"/>
+                                <input class="form-control compdata" id="c_email" type="text" style="width: 350px"/>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Direccion:</label>
-                                <input class="form-control" id="c_direccion" type="text"/>
+                                <input class="form-control compdata" id="c_direccion" type="text"/>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Colonia:</label>
-                                <input class="form-control" id="c_ccolonia" type="text" style="width: 350px"/>
+                                <input class="form-control compdata" id="c_ccolonia" type="text" style="width: 350px"/>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Codigo postal:</label>
-                                <input class="form-control" id="c_cp" type="text" style="width: 100px" onpaste="return false"/>
+                                <input class="form-control compdata" id="c_cp" type="text" style="width: 100px" onpaste="return false"/>
                             </div>
                         </form>
                     </div>
