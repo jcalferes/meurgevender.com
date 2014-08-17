@@ -55,14 +55,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="">Acerca de</a>
-                        </li>
-                        <li>
-                            <a href="">Servicios</a>
-                        </li>
-                        <li>
-                            <a href="">Contacto</a>
+                            <a href="">Contáctame</a>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +66,7 @@
             </div>
             <!-- /.container -->
         </nav>
-        
+
         <!-- Half Page Image Background Carousel Header -->
         <div id="myCarousel" class="carousel" >
             <!-- Indicators -->
@@ -83,21 +79,21 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <!-- Set the first background image using inline CSS below. -->
-                    <div class="fill" style="background-image:url('imgs/1.jpg');"></div>
+                    <div class="fill" style="background-image:url('imgs-slider/1.jpg');"></div>
                     <div class="carousel-caption">
                         <!--<h2>Caption 1</h2>-->
                     </div>
                 </div>
                 <div class="item">
                     <!-- Set the second background image using inline CSS below. -->
-                    <div class="fill" style="background-image:url('imgs/5.jpg');"></div>
+                    <div class="fill" style="background-image:url('imgs-slider/5.jpg');"></div>
                     <div class="carousel-caption">
                         <!--<h2>Caption 2</h2>-->
                     </div>
                 </div>
                 <div class="item">
                     <!-- Set the third background image using inline CSS below. -->
-                    <div class="fill" style="background-image:url('imgs/4.jpg');"></div>
+                    <div class="fill" style="background-image:url('imgs-slider/4.jpg');"></div>
                     <div class="carousel-caption">
                         <!--<h2>Caption 3</h2>-->
                     </div>
@@ -184,15 +180,18 @@
                                 <label class="control-label">Numero de pisos:</label>
                                 <input class="form-control compdata" id="c_pisos" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
                             </div>
-                            <div class="checkbox-inline" >
-                                <label>
-                                    <input type="checkbox" id="chk_jardin"> Jardin
-                                </label>
-                            </div>
-                            <div class="checkbox-inline" >
-                                <label>
-                                    <input type="checkbox" id="chk_patio"> Patio
-                                </label>
+                            <div class="form-group">
+                                <label class=" control-label">Este inmueble cuenta con:</label><br>
+                                <div class="checkbox" >
+                                    <label>
+                                        <input type="checkbox" id="chk_jardin"> Jardin
+                                    </label>
+                                </div>
+                                <div class="checkbox" >
+                                    <label>
+                                        <input type="checkbox" id="chk_patio"> Patio
+                                    </label>
+                                </div>
                             </div>
                         </form>
                         <hr>
@@ -238,7 +237,98 @@
                         <span style="font-size: 24px">Nueva <strong>Venta</strong></span>
                     </div>
                     <div class="modal-body">
-
+                        <h4>- Datos del predio:</h4>
+                        <form style="padding-left: 25px; padding-right: 25px">
+                            <div class="form-group">
+                                <label class="control-label">Colonia:</label>
+                                <input class="form-control ventdata" id="v_colonia" type="text"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Precio:</label>
+                                <input class="form-control ventdata" id="v_precio" type="text" placeholder="0.00" />
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label">Medidas del terreno:</label>
+                                <input class="form-control ventdata" id="v_medidas" type="text" placeholder="ej. 30m x 100m"/>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label">Numero de habitaciones:</label>
+                                <input class="form-control ventdata" id="v_habitaciones" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label">Numero de baños:</label>
+                                <input class="form-control ventdata" id="v_banos" type="number" min="0" placeholder="" style="width: 100px" onpaste="return  false"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Numero de pisos:</label>
+                                <input class="form-control ventdata" id="v_pisos" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label">Este inmueble cuenta con:</label><br>
+                                <div class="checkbox" >
+                                    <label>
+                                        <input type="checkbox" id="vhk_jardin"> Jardin
+                                    </label>
+                                </div>
+                                <div class="checkbox" >
+                                    <label>
+                                        <input type="checkbox" id="vhk_patio"> Patio
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label">Este inmueble puede tener acceso a los servicios de:</label><br>
+                                <div class="checkbox" >
+                                    <label>
+                                        <input type="checkbox" id="vhk_telefono"> Telefono
+                                    </label>
+                                </div>
+                                <div class="checkbox" >
+                                    <label>
+                                        <input type="checkbox" id="vhk_internet"> Internet
+                                    </label>
+                                </div>
+                                <div class="checkbox" >
+                                    <label>
+                                        <input type="checkbox" id="vhk_tvpaga"> TV de paga
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Imagen(es) del inmueble:</label>
+                                <span id="textoValor" class="text-muted"><em>Maximo 3 imagenes</em></span>
+                                <input type="file" id="files" name="files[]" accept="image/x-png, image/gif, image/jpeg" multiple />
+                                <output id="list-files"></output>
+                            </div>
+                        </form>
+                        <hr>
+                        <h4>- Datos del vendedor:</h4>
+                        <form style="padding-left: 25px; padding-right: 25px">
+                            <div class="form-group">
+                                <label class="control-label">Nombre:</label>
+                                <input class="form-control ventdata" id="v_nombre" type="text" onkeypress="return validkey(event);"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Telefono:</label>
+                                <input class="form-control ventdata" id="v_telefono" type="text" style="width: 350px" onpaste="return false"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Correo electronico:</label>
+                                <input class="form-control ventdata" id="v_email" type="text" style="width: 350px"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Direccion:</label>
+                                <input class="form-control ventdata" id="v_direccion" type="text"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Colonia:</label>
+                                <input class="form-control ventdata" id="v_ccolonia" type="text" style="width: 350px"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Codigo postal:</label>
+                                <input class="form-control ventdata" id="v_cp" type="text" style="width: 100px" onpaste="return false"/>
+                            </div>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" id="guardarventa" class="btn btn-success btn-circle btn-lg"><i class="fa fa-check"></i></button>
@@ -256,19 +346,19 @@
 
         <!-- Alertify JS -->
         <script src="../alertify/lib/alertify.js"></script>
-        
+
         <!-- Valid Campos Franz -->
         <script src="../utilerias/validCampoFranz.js"></script>
-        
+
         <!-- Numeric -->
         <script src="../utilerias/jquery.numeric.js"></script>
-        
+
 
         <!-- Script to Activate the Carousel -->
         <script>
-            $('.carousel').carousel({
-                interval: 5000 //changes the speed
-            });
+                                    $('.carousel').carousel({
+                                        interval: 5000 //changes the speed
+                                    });
         </script>
 
         <!-- Js -->
