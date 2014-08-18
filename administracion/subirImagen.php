@@ -42,12 +42,11 @@
                 </nav>
             </header>
             <!--seccion de las tablas-->
-            <section>
+            <form enctype="multipart/form-data" action="guardarImagen.php" method="POST">
+                <input name="uploadedfile" type="file" />
                 <br>
-                <table id="tablaInformacion" class="table table-hover">
-                </table>
-            </section>
-
+                <input type="submit" value="Subir archivo" class="btn btn-success"/>
+            </form>
         </div>
     </body>
 </html>
