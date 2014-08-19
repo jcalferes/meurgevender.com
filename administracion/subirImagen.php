@@ -43,10 +43,13 @@
             </header>
             <!--seccion de las tablas-->
             <form enctype="multipart/form-data" action="guardarImagen.php" method="POST">
-                <input name="uploadedfile" type="file" />
+                <input name="uploadedfile" type="file" required="true"/>
                 <br>
                 <input type="submit" value="Subir archivo" class="btn btn-success"/>
             </form>
+            <table id="table" class="table table-hover">
+            </table>
         </div>
+        <script src="js/imagenes.js"></script>
     </body>
 </html>
