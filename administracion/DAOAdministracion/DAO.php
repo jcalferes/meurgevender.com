@@ -38,4 +38,12 @@ class DAO {
         return $datos;
     }
 
+    function dameImagenes() {
+        include '../DaoConnection/coneccion.php';
+        $cn = new coneccion();
+        $sql = "SELECT * FROM imagenes";
+        $rs = mysql_query($sql, $cn->Conectarse());
+        return $rs;
+    }
+
 }

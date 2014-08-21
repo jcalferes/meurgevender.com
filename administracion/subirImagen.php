@@ -9,9 +9,6 @@
         <link rel="stylesheet" href="../font-awesome-4.1.0/css/font-awesome.css"/>
         <script src="../bootstrap/js/jquery.js"></script>
         <script src="../bootstrap/js/bootstrap.js"></script>
-        <script src="bootstrap-lightbox/bootstrap-lightbox.js"></script>
-        <link rel="stylesheet" href="bootstrap-lightbox/bootstrap-lightbox.css"/>
-
         <script src="js/index.js"></script>
     </head>
     <body style="background-color: #c1c5c7">
@@ -45,38 +42,14 @@
                 </nav>
             </header>
             <!--seccion de las tablas-->
-            <section>
+            <form enctype="multipart/form-data" action="guardarImagen.php" method="POST">
+                <input name="uploadedfile" type="file" required="true"/>
                 <br>
-                <table id="tablaInformacion" class="table table-hover">
-                </table>
-            </section>
-            <!--<section>-->
-            <!--hola-->
-                            <!--<a  data-toggle="lightbox" href="#demoLightbox" id="link"><img src="images/off.png"/></a>-->
-            <a data-toggle="lightbox" id="link">Open Lightbox</a>                
-            <div id="demoLightbox" 
-                 class="lightbox hide fade"  
-                 tabindex="-1" role="dialog" 
-                 aria-hidden="true">
-                <div class='lightbox-content'>
-                    <img src="images/off.png">
-                    <div class="lightbox-caption"><p>Your caption here</p></div>
-                </div>
-            </div>
-            <!--</section>-->
+                <input type="submit" value="Subir archivo" class="btn btn-success"/>
+            </form>
+            <table id="table" class="table table-hover">
+            </table>
         </div>
+        <script src="js/imagenes.js"></script>
     </body>
 </html>
-
-<script>
-    $(document).ready(function() {
-        $("#link").click(function() {
-            $('#demoLightbox').lightbox({
-                show = "true";
-            });
-            alert("mostrando");
-        });
-    });
-
-
-</script>
