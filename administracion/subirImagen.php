@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../font-awesome-4.1.0/css/font-awesome.css"/>
         <script src="../bootstrap/js/jquery.js"></script>
         <script src="../bootstrap/js/bootstrap.js"></script>
+
         <script src="js/index.js"></script>
     </head>
     <body style="background-color: #c1c5c7">
@@ -51,5 +52,7 @@
             </table>
         </div>
         <script src="js/imagenes.js"></script>
+        <script src="js/jquery.magnific-popup.js"></script>
+        <link rel="stylesheet" href="js/magnific-popup.css"/>
     </body>
 </html>

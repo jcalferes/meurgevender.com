@@ -53,16 +53,6 @@
             <!--<section>-->
             <!--hola-->
                             <!--<a  data-toggle="lightbox" href="#demoLightbox" id="link"><img src="images/off.png"/></a>-->
-            <a data-toggle="lightbox" id="link">Open Lightbox</a>                
-            <div id="demoLightbox" 
-                 class="lightbox hide fade"  
-                 tabindex="-1" role="dialog" 
-                 aria-hidden="true">
-                <div class='lightbox-content'>
-                    <img src="images/off.png">
-                    <div class="lightbox-caption"><p>Your caption here</p></div>
-                </div>
-            </div>
             <!--</section>-->
         </div>
     </body>
