@@ -211,6 +211,10 @@ $("#guardarcompra").click(function() {
             $("#c_ccolonia").val("");
             $("#c_cp").val("");
             $('#mdlcomprar').modal('toggle');
+
+            $("#collapseOnex").collapse('show');
+            $("#collapseTwox").collapse('hide');
+
             alertify.success("La publicacion se realizo con exito");
         } else {
             alertify.alert("ERROR: " + msg);
@@ -350,6 +354,10 @@ $("#guardarventa").click(function() {
             $("#v_ccolonia").val("");
             $("#v_cp").val("");
             $('#mdlvender').modal('toggle');
+
+            $("#collapseOne").collapse('show');
+            $("#collapseTwo").collapse('hide');
+
             alertify.success("La publicacion se realizo con exito");
         } else {
             alertify.alert("ERROR: " + msg);
