@@ -154,74 +154,87 @@
                         <span style="font-size: 24px">Nueva <strong>Compra</strong></span>
                     </div>
                     <div class="modal-body">
-                        <h4>- Datos del predio:</h4>
-                        <form style="padding-left: 25px; padding-right: 25px">
-                            <div class="form-group">
-                                <label class="control-label">Colonia:</label>
-                                <input class="form-control compdata" id="c_colonia" type="text"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Precio:</label>
-                                <input class="form-control compdata" id="c_precio" type="text" placeholder="0.00" />
-                            </div>
-                            <div class="form-group">
-                                <label class=" control-label">Medidas del terreno:</label>
-                                <input class="form-control compdata" id="c_medidas" type="text" placeholder="ej. 30m x 100m"/>
-                            </div>
-                            <div class="form-group">
-                                <label class=" control-label">Numero de habitaciones:</label>
-                                <input class="form-control compdata" id="c_habitaciones" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
-                            </div>
-                            <div class="form-group">
-                                <label class=" control-label">Numero de baños:</label>
-                                <input class="form-control compdata" id="c_banos" type="number" min="0" placeholder="" style="width: 100px" onpaste="return  false"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Numero de pisos:</label>
-                                <input class="form-control compdata" id="c_pisos" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
-                            </div>
-                            <div class="form-group">
-                                <label class=" control-label">Este inmueble cuenta con:</label><br>
-                                <div class="checkbox" >
-                                    <label>
-                                        <input type="checkbox" id="chk_jardin"> Jardin
-                                    </label>
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <button class="btn" data-toggle="collapse" data-parent="#accordion"  id="box_11">
+                                            Datos del predio
+                                        </button>
+                                    </h4>
                                 </div>
-                                <div class="checkbox" >
-                                    <label>
-                                        <input type="checkbox" id="chk_patio"> Patio
-                                    </label>
+                                <div id="collapseOnex" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <form style="padding-left: 25px; padding-right: 25px">
+                                            <div class="form-group">
+                                                <label class="control-label">Colonia:</label>
+                                                <input class="form-control compdata" id="c_colonia" type="text"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Precio:</label>
+                                                <input class="form-control compdata" id="c_precio" type="text" placeholder="0.00" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">Medidas del terreno:</label>
+                                                <input class="form-control compdata" id="c_medidas" type="text" placeholder="ej. 30m x 100m"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">Numero de habitaciones:</label>
+                                                <input class="form-control compdata" id="c_habitaciones" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">Numero de baños:</label>
+                                                <input class="form-control compdata" id="c_banos" type="number" min="0" placeholder="" style="width: 100px" onpaste="return  false"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Numero de pisos:</label>
+                                                <input class="form-control compdata" id="c_pisos" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">Este inmueble cuenta con:</label><br>
+                                                <div class="checkbox" >
+                                                    <label>
+                                                        <input type="checkbox" id="chk_jardin"> Jardin
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox" >
+                                                    <label>
+                                                        <input type="checkbox" id="chk_patio"> Patio
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                        </form>
-                        <hr>
-                        <h4>- Datos del vendedor:</h4>
-                        <form style="padding-left: 25px; padding-right: 25px">
-                            <div class="form-group">
-                                <label class="control-label">Nombre:</label>
-                                <input class="form-control compdata" id="c_nombre" type="text" onkeypress="return validkey(event);"/>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <button class="btn" data-toggle="collapse" data-parent="#accordion"  id="box_12">
+                                            Datos del comprador
+                                        </button>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwox" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <form style="padding-left: 25px; padding-right: 25px">
+                                            <div class="form-group">
+                                                <label class="control-label">Nombre:</label>
+                                                <input class="form-control compdata" id="c_nombre" type="text" onkeypress="return validkey(event);"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Telefono:</label>
+                                                <input class="form-control compdata" id="c_telefono" type="text" style="width: 350px" onpaste="return false"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Correo electronico:</label>
+                                                <input class="form-control compdata" id="c_email" type="text" style="width: 350px"/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label">Telefono:</label>
-                                <input class="form-control compdata" id="c_telefono" type="text" style="width: 350px" onpaste="return false"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Correo electronico:</label>
-                                <input class="form-control compdata" id="c_email" type="text" style="width: 350px"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Direccion:</label>
-                                <input class="form-control compdata" id="c_direccion" type="text"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Colonia:</label>
-                                <input class="form-control compdata" id="c_ccolonia" type="text" style="width: 350px"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Codigo postal:</label>
-                                <input class="form-control compdata" id="c_cp" type="text" style="width: 100px" onpaste="return false"/>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" id="guardarcompra" class="btn btn-success btn-circle btn-lg"><i class="fa fa-check"></i></button>
@@ -230,6 +243,8 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
+
+
         <div class="modal fade" id="mdlvender" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -237,98 +252,111 @@
                         <span style="font-size: 24px">Nueva <strong>Venta</strong></span>
                     </div>
                     <div class="modal-body">
-                        <h4>- Datos del predio:</h4>
-                        <form style="padding-left: 25px; padding-right: 25px">
-                            <div class="form-group">
-                                <label class="control-label">Colonia:</label>
-                                <input class="form-control ventdata" id="v_colonia" type="text"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Precio:</label>
-                                <input class="form-control ventdata" id="v_precio" type="text" placeholder="0.00" />
-                            </div>
-                            <div class="form-group">
-                                <label class=" control-label">Medidas del terreno:</label>
-                                <input class="form-control ventdata" id="v_medidas" type="text" placeholder="ej. 30m x 100m"/>
-                            </div>
-                            <div class="form-group">
-                                <label class=" control-label">Numero de habitaciones:</label>
-                                <input class="form-control ventdata" id="v_habitaciones" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
-                            </div>
-                            <div class="form-group">
-                                <label class=" control-label">Numero de baños:</label>
-                                <input class="form-control ventdata" id="v_banos" type="number" min="0" placeholder="" style="width: 100px" onpaste="return  false"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Numero de pisos:</label>
-                                <input class="form-control ventdata" id="v_pisos" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
-                            </div>
-                            <div class="form-group">
-                                <label class=" control-label">Este inmueble cuenta con:</label><br>
-                                <div class="checkbox" >
-                                    <label>
-                                        <input type="checkbox" id="vhk_jardin"> Jardin
-                                    </label>
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <button class="btn" data-toggle="collapse" data-parent="#accordion"  id="box_21">
+                                            Datos del predio
+                                        </button>
+                                    </h4>
                                 </div>
-                                <div class="checkbox" >
-                                    <label>
-                                        <input type="checkbox" id="vhk_patio"> Patio
-                                    </label>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <form style="padding-left: 25px; padding-right: 25px">
+                                            <div class="form-group">
+                                                <label class="control-label">Colonia:</label>
+                                                <input class="form-control ventdata" id="v_colonia" type="text"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Precio:</label>
+                                                <input class="form-control ventdata" id="v_precio" type="text" placeholder="0.00" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">Medidas del terreno:</label>
+                                                <input class="form-control ventdata" id="v_medidas" type="text" placeholder="ej. 30m x 100m"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">Numero de habitaciones:</label>
+                                                <input class="form-control ventdata" id="v_habitaciones" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">Numero de baños:</label>
+                                                <input class="form-control ventdata" id="v_banos" type="number" min="0" placeholder="" style="width: 100px" onpaste="return  false"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Numero de pisos:</label>
+                                                <input class="form-control ventdata" id="v_pisos" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">Este inmueble cuenta con:</label><br>
+                                                <div class="checkbox" >
+                                                    <label>
+                                                        <input type="checkbox" id="vhk_jardin"> Jardin
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox" >
+                                                    <label>
+                                                        <input type="checkbox" id="vhk_patio"> Patio
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" control-label">Este inmueble puede tener acceso a los servicios de:</label><br>
+                                                <div class="checkbox" >
+                                                    <label>
+                                                        <input type="checkbox" id="vhk_telefono"> Telefono
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox" >
+                                                    <label>
+                                                        <input type="checkbox" id="vhk_internet"> Internet
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox" >
+                                                    <label>
+                                                        <input type="checkbox" id="vhk_tvpaga"> TV de paga
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Imagen(es) del inmueble:</label>
+                                                <span id="textoValor" class="text-muted"><em>Maximo 3 imagenes</em></span>
+                                                <input type="file" id="files" name="files[]" accept="image/x-png, image/gif, image/jpeg" multiple />
+                                                <output id="list-files"></output>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class=" control-label">Este inmueble puede tener acceso a los servicios de:</label><br>
-                                <div class="checkbox" >
-                                    <label>
-                                        <input type="checkbox" id="vhk_telefono"> Telefono
-                                    </label>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <button class="btn" data-toggle="collapse" data-parent="#accordion"  id="box_22">
+                                            Datos del vendedor
+                                        </button>
+                                    </h4>
                                 </div>
-                                <div class="checkbox" >
-                                    <label>
-                                        <input type="checkbox" id="vhk_internet"> Internet
-                                    </label>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <form style="padding-left: 25px; padding-right: 25px">
+                                            <div class="form-group">
+                                                <label class="control-label">Nombre:</label>
+                                                <input class="form-control ventdata" id="v_nombre" type="text" onkeypress="return validkey(event);"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Telefono:</label>
+                                                <input class="form-control ventdata" id="v_telefono" type="text" style="width: 350px" onpaste="return false"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Correo electronico:</label>
+                                                <input class="form-control ventdata" id="v_email" type="text" style="width: 350px"/>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                                <div class="checkbox" >
-                                    <label>
-                                        <input type="checkbox" id="vhk_tvpaga"> TV de paga
-                                    </label>
-                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Imagen(es) del inmueble:</label>
-                                <span id="textoValor" class="text-muted"><em>Maximo 3 imagenes</em></span>
-                                <input type="file" id="files" name="files[]" accept="image/x-png, image/gif, image/jpeg" multiple />
-                                <output id="list-files"></output>
-                            </div>
-                        </form>
-                        <hr>
-                        <h4>- Datos del vendedor:</h4>
-                        <form style="padding-left: 25px; padding-right: 25px">
-                            <div class="form-group">
-                                <label class="control-label">Nombre:</label>
-                                <input class="form-control ventdata" id="v_nombre" type="text" onkeypress="return validkey(event);"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Telefono:</label>
-                                <input class="form-control ventdata" id="v_telefono" type="text" style="width: 350px" onpaste="return false"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Correo electronico:</label>
-                                <input class="form-control ventdata" id="v_email" type="text" style="width: 350px"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Direccion:</label>
-                                <input class="form-control ventdata" id="v_direccion" type="text"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Colonia:</label>
-                                <input class="form-control ventdata" id="v_ccolonia" type="text" style="width: 350px"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Codigo postal:</label>
-                                <input class="form-control ventdata" id="v_cp" type="text" style="width: 100px" onpaste="return false"/>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" id="guardarventa" class="btn btn-success btn-circle btn-lg"><i class="fa fa-check"></i></button>
@@ -356,9 +384,9 @@
 
         <!-- Script to Activate the Carousel -->
         <script>
-                                    $('.carousel').carousel({
-                                        interval: 5000 //changes the speed
-                                    });
+                                                    $('.carousel').carousel({
+                                                        interval: 5000 //changes the speed
+                                                    });
         </script>
 
         <!-- Js -->

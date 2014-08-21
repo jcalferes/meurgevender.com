@@ -63,6 +63,7 @@ $(document).ready(function() {
     $('#v_cp').numeric();
     $('#v_pisos').numeric();
     $('#v_telefono').numeric();
+
 });
 
 $("#btnvender").click(function() {
@@ -164,9 +165,9 @@ $("#guardarcompra").click(function() {
         return false;
     }
 
-    var direccion = $("#c_direccion").val();
-    var ccolonia = $("#c_ccolonia").val();
-    var cp = $("#c_cp").val();
+    var direccion = 0;
+    var ccolonia = 0;
+    var cp = 0;
 
     var datos = new FormData();
 
@@ -291,9 +292,9 @@ $("#guardarventa").click(function() {
         return false;
     }
 
-    var direccion = $("#v_direccion").val();
-    var ccolonia = $("#v_ccolonia").val();
-    var cp = $("#v_cp").val();
+    var direccion = 0;
+    var ccolonia = 0;
+    var cp = 0;
 
     var datos = new FormData();
 
@@ -355,4 +356,24 @@ $("#guardarventa").click(function() {
         }
     });
 
+});
+
+$("#box_11").click(function() {
+    $("#collapseOnex").collapse('show');
+    $("#collapseTwox").collapse('hide');
+});
+
+$("#box_12").click(function() {
+    $("#collapseOnex").collapse('hide');
+    $("#collapseTwox").collapse('show');
+});
+
+$("#box_21").click(function() {
+    $("#collapseOne").collapse('show');
+    $("#collapseTwo").collapse('hide');
+});
+
+$("#box_22").click(function() {
+    $("#collapseOne").collapse('hide');
+    $("#collapseTwo").collapse('show');
 });
