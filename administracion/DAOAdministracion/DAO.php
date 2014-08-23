@@ -45,5 +45,25 @@ class DAO {
         $rs = mysql_query($sql, $cn->Conectarse());
         return $rs;
     }
+    
+    function dameImagenesRecarga() {
+        $cn = new coneccion();
+        $sql = "SELECT * FROM imagenes";
+        $rs = mysql_query($sql, $cn->Conectarse());
+        return $rs;
+    }
+
+    function ejecutarSentencia($sql) {
+        include '../DaoConnection/coneccion.php';
+        $cn = new coneccion();
+        if (!mysql_query($sql, $cn->Conectarse())) {
+            throw new Exception(mysql_error());
+        }
+    }
+
+    function formatoError($error) {
+        $errorPerzonalizado = "<h1> <label style='color: red'>" . $error . "</lable></h1>";
+        return $errorPerzonalizado;
+    }
 
 }

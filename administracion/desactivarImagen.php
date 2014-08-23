@@ -2,7 +2,14 @@
 <?php
 include './DAOAdministracion/DAO.php';
 $dao = new DAO();
-$rs = $dao->dameImagenes();
+try {
+    $idImagen = $_GET["id"];
+    $sql = "UPDATE imagenes set idSlider ='0' WHERE idImagen ='$idImagen'";
+    $dao->ejecutarSentencia($sql);
+    $rs = $dao->dameImagenesRecarga();
+} catch (Exception $e) {
+    $dao->formatoError($e->getMessage());
+}
 ?>
 
 <table id="table" class="table table-hover">
@@ -35,9 +42,9 @@ if ($rs == false) {
             </td>
             <td><?php
                 if ($datos["idSlider"] == 1) {
-                    echo '<a onclick="descartivarImagem('.$datos["idImagen"].');"><span class="glyphicon glyphicon-thumbs-up"></span></a>';
+                    echo '<a onclick="descartivarImagem(' . $datos["idImagen"] . ');"><span class="glyphicon glyphicon-thumbs-up"></span></a>';
                 } else {
-                    echo '<a onclick="activarImagen('.$datos["idImagen"].');"><span class="glyphicon glyphicon-thumbs-down"></span></a>';
+                    echo '<a onclick="activarImagen(' . $datos["idImagen"] . ');"><span class="glyphicon glyphicon-thumbs-down"></span></a>';
                 }
                 ?>
             </td>
