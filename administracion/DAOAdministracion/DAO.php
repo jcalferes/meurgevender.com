@@ -45,7 +45,9 @@ class DAO {
         $rs = mysql_query($sql, $cn->Conectarse());
         return $rs;
     }
+
     
+
     function dameImagenesRecarga() {
         $cn = new coneccion();
         $sql = "SELECT * FROM imagenes";

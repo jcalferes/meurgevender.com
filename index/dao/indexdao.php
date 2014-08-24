@@ -81,4 +81,11 @@ class indexdao {
         return $ctrl;
     }
 
+    function dameImagenesSlider() {
+        $cn = new coneccion();
+        $sql = "SELECT * FROM imagenes where idSlider = '1'";
+        $rs = mysql_query($sql, $cn->Conectarse());
+        return $rs;
+    }
+
 }

@@ -13,6 +13,14 @@
         <link rel="stylesheet" href="bootstrap-lightbox/bootstrap-lightbox.css"/>
 
         <script src="js/index.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#tablaInformacion").slideUp('slow');
+                $("#tablaInformacion").load("dameInformacionVentas.php", function() {
+                    $("#tablaInformacion").slideDown('slow');
+                });
+            });
+        </script>
     </head>
     <body style="background-color: #c1c5c7">
         <div class="container" style="background-color: white">
