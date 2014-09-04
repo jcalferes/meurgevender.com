@@ -1,0 +1,10 @@
+.scrollUp{
+    width:40px;
+    height:40px;
+    /*opacity:0.6;*/
+    position:fixed;
+    bottom:20px; /* conviene que quede arriba del footer */
+    right:30px; /* Izquierda o derecha según el diseño*/
+    display:none;
+    background: url('../images/flecha-arriba.png') no-repeat; /* nuestra imagen*/
+}

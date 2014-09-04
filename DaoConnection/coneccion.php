@@ -16,7 +16,7 @@ class coneccion {
 //    }
 
     function Conectarse() {
-        if (!($link = mysql_connect("localhost", "root", "12345"))) {
+        if (!($link = mysql_connect("localhost", "root", ""))) {
             echo "Error conectando a la base de datos.";
             exit();
         }

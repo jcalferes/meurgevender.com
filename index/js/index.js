@@ -3,6 +3,18 @@ var archivos;
 var calculando = 3;
 //==============================================================================
 // Utilerias Rapidas============================================================
+$('.carousel').carousel({
+    interval: 5000 //changes the speed
+});
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+        $('.scrollUp').fadeIn();
+    } else {
+        $('.scrollUp').fadeOut();
+    }
+});
+
 function validkey(e) { // 1
     tecla = (document.all) ? e.keyCode : e.which; // 2
     if (tecla == 8)
@@ -48,6 +60,18 @@ function handleFileSelect(evt) {
 }
 //==============================================================================
 $(document).ready(function() {
+    $('.scrollUp').click(function() {
+        $("html, body").animate({scrollTop: 0}, 500);
+        return false;
+    });
+
+    $('a.ancla').click(function(e) {
+        e.preventDefault();
+        enlace = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(enlace).offset().top}, 500);
+    });
+
+
     $('#c_habitaciones').numeric();
     $('#c_banos').numeric();
     $('#c_banos').numeric();

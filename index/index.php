@@ -26,6 +26,9 @@
         <link href="../alertify/themes/alertify.core.css" rel="stylesheet">
         <link href="../alertify/themes/alertify.default.css" rel="stylesheet">
 
+        <!-- Otros -->
+        <link href="css/index.css" rel="stylesheet">
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -103,13 +106,8 @@
                     </div>
                 </div>
             </div>
-
             <hr>
-
-            <div class="divs" 
-                 id="ancla1">
-                <br>
-                <!--<br>-->
+            <div class="divs" id="ancla1">
                 <div class="row">
                     <div class="col-lg-12 col-ms-12">
                         <center>
@@ -118,9 +116,7 @@
                                 color: #5cb85c;
                                 ">DESCUBRE UNA NUEVA FORMA DE VENDER CASAS</h3>
                         </center>
-                        <br>
                         <div class="col-lg-4">
-                            
                             <img style="margin-top: 20%" src="images/imgenVendedora.png" 
                                  class="img-responsive"/>
                         </div>
@@ -151,7 +147,6 @@
                 </div>
                 <!-- /.row -->
             </footer>
-
         </div>
         <!-- /.container -->
         <!-- Modal -->
@@ -392,28 +387,11 @@
 
         <!-- Script to Activate the Carousel -->
         <script>
-                                                    $(document).ready(function() {
-                                                        //nos desplazamos entre todos los divs
-                                                        $('a.ancla').click(function(e) {
-                                                            e.preventDefault();
-                                                            enlace = $(this).attr('href');
-                                                            $('html, body').animate({
-                                                                scrollTop: $(enlace).offset().top
-                                                            }, 500);
-                                                        });
-                                                    });
 
-
-
-
-
-
-                                                    $('.carousel').carousel({
-                                                        interval: 5000 //changes the speed
-                                                    });
         </script>
 
         <!-- Js -->
         <script src="js/index.js"></script>
+        <a href="#" class="scrollUp"></a>
     </body>
 </html>
