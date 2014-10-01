@@ -249,7 +249,7 @@ $("#guardarcompra").click(function() {
 $("#guardarventa").click(function() {
 
     var ctrlvalidacionventa;
-    $(".ventdata").each(function() {
+    $(".ventdata").each(function () {
         var valor = $.trim($(this).val());
         if (valor == "") {
             ctrlvalidacionventa = 1;

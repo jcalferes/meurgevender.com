@@ -57,7 +57,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#ancla1" class="ancla">Quienes somos</a>
+                            <a href="#ancla1" class="ancla">Quiénes somos</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
