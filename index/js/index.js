@@ -7,7 +7,7 @@ $('.carousel').carousel({
     interval: 5000 //changes the speed
 });
 
-$(window).scroll(function() {
+$(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
         $('.scrollUp').fadeIn();
     } else {
@@ -40,7 +40,7 @@ function handleFileSelect(evt) {
             var fileName = f.name;
             var fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
             if (fileExtension !== "jpg" && fileExtension !== "png" && fileExtension !== "gif") {
-                alertify.error("Solo puedes subir archivos jpg, gif y png");
+                alertify.error("Solo puedes subir archivos .jpg, .gif y .png");
                 $("#files").val("");
                 $("#list-files").val("");
                 break;
@@ -52,20 +52,20 @@ function handleFileSelect(evt) {
         }
         document.getElementById('list-files').innerHTML = '<ul>' + output.join('') + '</ul>';
     } else {
-        alertify.error("Solo puedes Subir " + calculando + " imagenes");
+        alertify.error("Solo puedes Subir " + calculando + " imágenes");
         $("#files").val("");
         $("#list-files").val("");
     }
 
 }
 //==============================================================================
-$(document).ready(function() {
-    $('.scrollUp').click(function() {
+$(document).ready(function () {
+    $('.scrollUp').click(function () {
         $("html, body").animate({scrollTop: 0}, 500);
         return false;
     });
 
-    $('a.ancla').click(function(e) {
+    $('a.ancla').click(function (e) {
         e.preventDefault();
         enlace = $(this).attr('href');
         $('html, body').animate({scrollTop: $(enlace).offset().top}, 500);
@@ -90,20 +90,20 @@ $(document).ready(function() {
 
 });
 
-$("#btnvender").click(function() {
+$("#btnvender").click(function () {
     $('#mdlvender').modal('show');
 });
 
-$("#btncomprar").click(function() {
+$("#btncomprar").click(function () {
     $('#mdlcomprar').modal('show');
 });
 
-$("#cancelarcompra").click(function() {
+$("#cancelarcompra").click(function () {
     alertify.set({labels: {
             ok: "Si",
             cancel: "No, espera"
         }});
-    alertify.confirm("¿Estas seguro de cancelar la publicacion? Todo el contenido no guardado se perdera.", function(e) {
+    alertify.confirm("¿Estás seguro de cancelar la publicación? Todo el contenido no guardado se perderá.", function (e) {
         if (e) {
             $("#c_colonia").val("");
             $("#c_precio").val("");
@@ -126,12 +126,12 @@ $("#cancelarcompra").click(function() {
 
 });
 
-$("#cancelarventa").click(function() {
+$("#cancelarventa").click(function () {
     alertify.set({labels: {
             ok: "Si",
             cancel: "No, espera"
         }});
-    alertify.confirm("¿Estas seguro de cancelar la publicacion? Todo el contenido no guardado se perdera.", function(e) {
+    alertify.confirm("¿Estás seguro de cancelar la publicación? Todo el contenido no guardado se perderá.", function (e) {
         if (e) {
             $('#mdlvender').modal('toggle');
         } else {
@@ -139,10 +139,10 @@ $("#cancelarventa").click(function() {
     });
 });
 
-$("#guardarcompra").click(function() {
+$("#guardarcompra").click(function () {
 
     var ctrlvalidacioncompra;
-    $(".compdata").each(function() {
+    $(".compdata").each(function () {
         var valor = $.trim($(this).val());
         if (valor == "") {
             ctrlvalidacioncompra = 1;
@@ -184,7 +184,7 @@ $("#guardarcompra").click(function() {
     var email = $("#c_email").val();
     if (/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) {
     } else {
-        alertify.error("La direccion de correo electronico es invalida");
+        alertify.error("La dirección de correo electrónico es inválida");
         $("#c_email").focus();
         return false;
     }
@@ -218,7 +218,7 @@ $("#guardarcompra").click(function() {
         data: datos, //Le pasamos el objeto que creamos con los archivos
         processData: false, //Debe estar en false para que JQuery no procese los datos a enviar
         cache: false //Para que el formulario no guarde cache
-    }).done(function(msg) {
+    }).done(function (msg) {
         if (msg == 0) {
             $("#c_colonia").val("");
             $("#c_precio").val("");
@@ -239,14 +239,14 @@ $("#guardarcompra").click(function() {
             $("#collapseOnex").collapse('show');
             $("#collapseTwox").collapse('hide');
 
-            alertify.success("La publicacion se realizo con exito");
+            alertify.success("La publicación se realizó con éxito");
         } else {
             alertify.alert("ERROR: " + msg);
         }
     });
 });
 
-$("#guardarventa").click(function() {
+$("#guardarventa").click(function () {
 
     var ctrlvalidacionventa;
     $(".ventdata").each(function () {
@@ -315,7 +315,7 @@ $("#guardarventa").click(function() {
     var email = $("#v_email").val();
     if (/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) {
     } else {
-        alertify.error("La direccion de correo electronico es invalida");
+        alertify.error("La dirección de correo electrónico es inválida");
         $("#v_email").focus();
         return false;
     }
@@ -355,7 +355,7 @@ $("#guardarventa").click(function() {
         data: datos, //Le pasamos el objeto que creamos con los archivos
         processData: false, //Debe estar en false para que JQuery no procese los datos a enviar
         cache: false //Para que el formulario no guarde cache
-    }).done(function(msg) {
+    }).done(function (msg) {
         if (msg == 0) {
             $("#v_colonia").val("");
             $("#v_precio").val("");
@@ -382,7 +382,7 @@ $("#guardarventa").click(function() {
             $("#collapseOne").collapse('show');
             $("#collapseTwo").collapse('hide');
 
-            alertify.success("La publicacion se realizo con exito");
+            alertify.success("La publicación se realizó con éxito");
         } else {
             alertify.alert("ERROR: " + msg);
         }
@@ -390,22 +390,22 @@ $("#guardarventa").click(function() {
 
 });
 
-$("#box_11").click(function() {
+$("#box_11").click(function () {
     $("#collapseOnex").collapse('show');
     $("#collapseTwox").collapse('hide');
 });
 
-$("#box_12").click(function() {
+$("#box_12").click(function () {
     $("#collapseOnex").collapse('hide');
     $("#collapseTwox").collapse('show');
 });
 
-$("#box_21").click(function() {
+$("#box_21").click(function () {
     $("#collapseOne").collapse('show');
     $("#collapseTwo").collapse('hide');
 });
 
-$("#box_22").click(function() {
+$("#box_22").click(function () {
     $("#collapseOne").collapse('hide');
     $("#collapseTwo").collapse('show');
 });

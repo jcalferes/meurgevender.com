@@ -182,22 +182,22 @@
                                                 <input class="form-control compdata" id="c_medidas" type="text" placeholder="ej. 30m x 100m"/>
                                             </div>
                                             <div class="form-group">
-                                                <label class=" control-label">Numero de habitaciones:</label>
+                                                <label class=" control-label">Número de habitaciones:</label>
                                                 <input class="form-control compdata" id="c_habitaciones" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
                                             </div>
                                             <div class="form-group">
-                                                <label class=" control-label">Numero de baños:</label>
+                                                <label class=" control-label">Número de baños:</label>
                                                 <input class="form-control compdata" id="c_banos" type="number" min="0" placeholder="" style="width: 100px" onpaste="return  false"/>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label">Numero de pisos:</label>
+                                                <label class="control-label">Número de pisos:</label>
                                                 <input class="form-control compdata" id="c_pisos" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
                                             </div>
                                             <div class="form-group">
                                                 <label class=" control-label">Este inmueble cuenta con:</label><br>
                                                 <div class="checkbox" >
                                                     <label>
-                                                        <input type="checkbox" id="chk_jardin"> Jardin
+                                                        <input type="checkbox" id="chk_jardin"> Jardín
                                                     </label>
                                                 </div>
                                                 <div class="checkbox" >
@@ -226,11 +226,11 @@
                                                 <input class="form-control compdata" id="c_nombre" type="text" onkeypress="return validkey(event);"/>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label">Telefono:</label>
+                                                <label class="control-label">Teléfono:</label>
                                                 <input class="form-control compdata" id="c_telefono" type="text" style="width: 350px" onpaste="return false"/>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label">Correo electronico:</label>
+                                                <label class="control-label">Correo electrónico:</label>
                                                 <input class="form-control compdata" id="c_email" type="text" style="width: 350px"/>
                                             </div>
                                         </form>
@@ -280,22 +280,22 @@
                                                 <input class="form-control ventdata" id="v_medidas" type="text" placeholder="ej. 30m x 100m"/>
                                             </div>
                                             <div class="form-group">
-                                                <label class=" control-label">Numero de habitaciones:</label>
+                                                <label class=" control-label">Número de habitaciones:</label>
                                                 <input class="form-control ventdata" id="v_habitaciones" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
                                             </div>
                                             <div class="form-group">
-                                                <label class=" control-label">Numero de baños:</label>
+                                                <label class=" control-label">Número de baños:</label>
                                                 <input class="form-control ventdata" id="v_banos" type="number" min="0" placeholder="" style="width: 100px" onpaste="return  false"/>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label">Numero de pisos:</label>
+                                                <label class="control-label">Número de pisos:</label>
                                                 <input class="form-control ventdata" id="v_pisos" type="number" min="1" placeholder="" style="width: 100px" onpaste="return  false"/>
                                             </div>
                                             <div class="form-group">
                                                 <label class=" control-label">Este inmueble cuenta con:</label><br>
                                                 <div class="checkbox" >
                                                     <label>
-                                                        <input type="checkbox" id="vhk_jardin"> Jardin
+                                                        <input type="checkbox" id="vhk_jardin"> Jardín
                                                     </label>
                                                 </div>
                                                 <div class="checkbox" >
@@ -308,7 +308,7 @@
                                                 <label class=" control-label">Este inmueble puede tener acceso a los servicios de:</label><br>
                                                 <div class="checkbox" >
                                                     <label>
-                                                        <input type="checkbox" id="vhk_telefono"> Telefono
+                                                        <input type="checkbox" id="vhk_telefono"> Teléfono
                                                     </label>
                                                 </div>
                                                 <div class="checkbox" >
@@ -324,7 +324,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Imagen(es) del inmueble:</label>
-                                                <span id="textoValor" class="text-muted"><em>Maximo 3 imagenes</em></span>
+                                                <span id="textoValor" class="text-muted"><em>Máximo 3 imagenes</em></span>
                                                 <input type="file" id="files" name="files[]" accept="image/x-png, image/gif, image/jpeg" multiple />
                                                 <output id="list-files"></output>
                                             </div>
